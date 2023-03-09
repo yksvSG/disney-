@@ -1,11 +1,13 @@
-import "./App.css";
+import { Container, GlobalStyle } from "./App.styled.js";
 import Nav from "./components/Nav";
-
 function App() {
   return (
-    <div>
-      <Nav />
-    </div>
+    <>
+      <GlobalStyle />
+      <Container>
+        <Nav />
+      </Container>
+    </>
   );
 }
 
