@@ -13,15 +13,16 @@ export const fetchData = async (setState) => {
   // 현재 상영 중인 영화 정보 가져오기
   const requestMovieData = await axiosInstance.get(requests.fetchNowPlaying);
   // request 확인하기
-  console.log("requestMovieData :", requestMovieData);
+  // console.log("requestMovieData :", requestMovieData);
   const movieId =
     requestMovieData.data.results[
       Math.floor(Math.random() * requestMovieData.data.results.length)
     ].id;
-  console.log("movieId :", movieId);
+  // console.log("movieId :", movieId);
 
   const { data: movieDetail } = await axiosInstance.get(`movie/${movieId}`, {
     params: { append_to_response: "videos" },
   });
   setState(movieDetail);
+  console.log("MovieData", movieDetail);
 };

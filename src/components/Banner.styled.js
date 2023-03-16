@@ -3,6 +3,13 @@ export const HeaderBanner = styled.header`
   background-image: url(${(props) => props.movie});
   background-position: top center;
   background-size: cover;
+  color: white;
+  object-fit: contain;
+  height: 448px;
+  @media (min-width: 1500px) {
+    position: relative;
+    height: 600px;
+  }
 `;
 
 export const BannerContents = styled.div`
@@ -41,6 +48,7 @@ export const BannerButton = styled.button`
   margin-right: 1rem;
   background-color: ${(props) => (props.play ? "white" : "")};
   color: ${(props) => (props.play ? "black" : "")};
+
   &:hover {
     color: #000;
     background-color: rgba(170, 170, 170, 0.9);
@@ -79,5 +87,36 @@ export const BannerFadeBottom = styled.div`
     bottom: 0;
     width: 100%;
     height: 40rem;
+  }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* App.styled.js 의 Container가 main tag이므로 참고 */
+  height: 100vh; /* App.styled.js 의 Container 참고 */
+`;
+
+export const HomeContainer = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Iframe = styled.iframe`
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.65;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 `;
