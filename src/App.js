@@ -1,6 +1,7 @@
 import { Container, GlobalStyle } from "./App.styled.js";
 import Banner from "./components/Banner.js";
 import Nav from "./components/Nav";
+import Category from "./components/Category";
 function App() {
   return (
     <>
@@ -8,6 +9,7 @@ function App() {
       <Container>
         <Nav />
         <Banner />
+        <Category />
       </Container>
     </>
   );
