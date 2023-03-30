@@ -26,3 +26,24 @@ export const fetchData = async (setState) => {
   setState(movieDetail);
   console.log("MovieData", movieDetail);
 };
+
+// SearchTerm 에 맞는 영화 데이터 가져오기
+export const fetchSearchMovie = async (searchTerm, setSearchState) => {
+  try {
+    const request = await axiosInstance.get(
+      `/search/multi?include_adult=false&query=${searchTerm}`
+    );
+    console.log("request : ", request.data.results);
+    setSearchState(request.data.results);
+  } catch (error) {
+    console.log("------------------------------------");
+    console.log("fetchSearchMovie 에러 : ", error);
+    console.log("------------------------------------");
+  }
+};
+
+export const fetchDataMovieId = async (movieId, setState) => {
+  const request = await axiosInstance.get(`movie/${movieId}`);
+  console.log("request : ", request);
+  setState(request.data);
+};
