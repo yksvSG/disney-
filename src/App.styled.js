@@ -1,0 +1,15 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+body {
+  background-color: #040714;
+  color: #f9f9f9;
+  font-family: Avenir-Roman, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+`;

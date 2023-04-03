@@ -65,7 +65,7 @@ const Row = ({ title, id, fetchUrl }) => {
         {/* 영화 나열 구간 */}
         <Content id={id}>
           {movies.map((movie) => (
-            <SwiperSlide>
+            <SwiperSlide key={movie.id}>
               <Wrap>
                 <img
                   key={movie.id}

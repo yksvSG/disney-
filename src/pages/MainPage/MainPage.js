@@ -9,7 +9,6 @@ import { Container, GlobalStyle } from "./MainPage.styled";
 const MainPage = () => {
   return (
     <>
-      <GlobalStyle />
       <Container>
         <Nav />
         <Banner />

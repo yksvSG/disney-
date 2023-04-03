@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import MainPage from "./pages/MainPage/MainPage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import SearchPage from "./pages/SearchPage/SearchPage";
+import { GlobalStyle } from "./App.styled";
 
 const Layout = () => {
   return (
@@ -18,6 +19,7 @@ const Layout = () => {
 function App() {
   return (
     <>
+      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<LoginPage />} />
